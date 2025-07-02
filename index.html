@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search movie</title>
-  <link rel="stylesheet" href="css/searchBar.css">
-  <script src="https://kit.fontawesome.com/bb239bc160.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <nav class="container">
-    <form action="" class="search-bar">
-      <input type="text" placeholder="Search movie tittle" name="searchBar">
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-  </nav>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search movie</title>
+    <link rel="stylesheet" href="css/searchBar.css" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9));
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/bb239bc160.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="container">
+      <form action="" class="search-bar">
+        <input type="text" placeholder="Search movie tittle" name="searchBar" />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+
+    <main>
+      <svg>
+        <g>
+          <path d="M 50,100 A 1,1 0 0 1 50,0" />
+        </g>
+        <g>
+          <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+        </g>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: #ff56a1; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #ff9350; stop-opacity: 1" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </main>
+  </body>
 </html>
