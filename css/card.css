@@ -57,7 +57,7 @@ h3 {
   color: var(--color-muted);
 }
 
-p {
+p.plot {
   color: var(--color-muted);
   white-space: nowrap;
   overflow: hidden;
@@ -65,10 +65,21 @@ p {
   margin: 0;
 }
 
+p.plot.expanded {
+  color: var(--color-muted);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  margin: 0;
+}
+
 .read-more {
   font-size: 14px;
   display: block;
   margin: 6px 0 18px;
+  text-decoration: underline;
+  color: rgb(83, 83, 251);
+  cursor: pointer;
 }
 
 .details {
@@ -85,7 +96,6 @@ p {
 
 .buttons {
   display: flex;
-  gap: 8px;
 }
 
 .primary-btn {
@@ -105,7 +115,7 @@ p {
 }
 
 @media (width >= 640px) {
-  p {
+  p.plot {
     white-space: inherit;
     margin-bottom: 24px;
   }
