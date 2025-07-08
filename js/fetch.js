@@ -68,4 +68,4 @@ async function fetchMovies(keyword) {
   }
 }
 
-fetchMovies("it");
+fetchMovies();

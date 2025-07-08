@@ -3,7 +3,6 @@ main {
   margin: 0;
   display: grid;
   place-items: center;
-  background: #ffe7ce;
 }
 
 :root {
