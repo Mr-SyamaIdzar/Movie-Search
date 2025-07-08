@@ -3,6 +3,11 @@ async function fetchMovies(keyword) {
   const hasilContainer = document.querySelector("#hasil");
   hasilContainer.innerHTML = "";
 
+  if (!keyword || keyword.trim() === "") {
+    tampilSVG(hasilContainer);
+    return;
+  }
+
   try {
     const response = await axios.get(
       `https://www.omdbapi.com/?apikey=${apiKey}&s=${keyword}&type=movie`
@@ -33,7 +38,9 @@ async function fetchMovies(keyword) {
 function buatCard(detail, container) {
   const cardHTML = `
     <div class="card">
-      <img class="image" src="${detail.Poster !== "N/A" ? detail.Poster : "placeholder.jpg"}" alt="${detail.Title}" />
+      <img class="image" src="${
+        detail.Poster !== "N/A" ? detail.Poster : "placeholder.jpg"
+      }" alt="${detail.Title}" />
       <div class="content">
         <h2>${detail.Title}</h2>
         <h3>${detail.Year}</h3>
@@ -46,7 +53,9 @@ function buatCard(detail, container) {
           </span>
         </div>
         <div class="buttons">
-          <a href="detail.html?id=${detail.imdbID}" class="primary-btn">Search</a>
+          <a href="detail.html?id=${
+            detail.imdbID
+          }" class="primary-btn">Detail</a>
         </div>
       </div>
     </div>
@@ -67,5 +76,46 @@ function buatCard(detail, container) {
   });
 }
 
-// Panggil fungsi utama
-fetchMovies();
+function searchMovie() {
+  const form = document.querySelector(".search-bar");
+  const input = form.querySelector(".field-input");
+  const hasilContainer = document.querySelector("#hasil");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const keyword = input.value.trim();
+
+    if (keyword) {
+      fetchMovies(keyword);
+    } else {
+      tampilSVG(hasilContainer);
+    }
+  });
+}
+
+function tampilSVG(container) {
+  container.innerHTML = `
+  <div class="loading">
+    <svg>
+      <g>
+        <path d="M 50,100 A 1,1 0 0 1 50,0" />
+      </g>
+      <g>
+        <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+      </g>
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color: #ff56a1; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #ff9350; stop-opacity: 1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  `;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  searchMovie();
+  tampilSVG(document.querySelector("#hasil"));
+});

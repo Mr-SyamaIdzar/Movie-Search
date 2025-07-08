@@ -6,7 +6,7 @@
     <title>Search movie</title>
     <link rel="stylesheet" href="css/searchBar.css" />
     <link rel="stylesheet" href="css/card.css" />
-    <!-- <link rel="stylesheet" href="css/loading.css" /> -->
+    <link rel="stylesheet" href="css/loading.css" />
     <style>
       * {
         margin: 0;
@@ -33,30 +33,18 @@
   <body>
     <nav class="container">
       <form action="" class="search-bar">
-        <input type="text" placeholder="Search movie tittle" name="searchBar" />
+        <input
+          type="text"
+          placeholder="Search movie tittle"
+          class="field-input"
+        />
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     </nav>
 
-    <main id="hasil">
-      <!-- loading-screen -->
-      <!-- <svg>
-        <g>
-          <path d="M 50,100 A 1,1 0 0 1 50,0" />
-        </g>
-        <g>
-          <path d="M 50,75 A 1,1 0 0 0 50,-25" />
-        </g>
-        <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color: #ff56a1; stop-opacity: 1" />
-            <stop offset="100%" style="stop-color: #ff9350; stop-opacity: 1" />
-          </linearGradient>
-        </defs>
-      </svg> -->
-    </main>
+    <main id="hasil"></main>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/fetch.js"></script>
