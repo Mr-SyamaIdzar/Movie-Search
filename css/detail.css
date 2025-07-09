@@ -1,13 +1,5 @@
 :root {
-  --pink: #de5d83;
-  --black: #101116;
   --gray: #bebebe;
-  --light-gray: #d9d9d9;
-  --comment-box: #171b27;
-  --comment: #555d68;
-  --comment-date: #8a8a8a;
-  --warning: #e22c2c;
-  --yellow: #eee62f;
 }
 
 body {
@@ -17,7 +9,7 @@ body {
 
 .movie-container {
   width: 100%;
-  height: 100vh;
+  margin: 1rem 0;
 }
 
 .movie-description {
@@ -26,10 +18,12 @@ body {
   gap: 15%;
   margin: 0 5%;
 }
+
 .movie-description img {
   width: 330px;
   height: 455px;
 }
+
 .movie-description .movie-content {
   height: 455px;
   margin-top: 1rem;
@@ -37,16 +31,19 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+
 .movie-content h1 {
   color: #fff;
   font-weight: 500;
   font-size: 2.4rem;
 }
+
 .movie-content p {
   color: #d9d9d9;
   font-weight: 400;
   font-size: 1.1rem;
 }
+
 .movie-content .movie-type {
   margin-top: 1.4rem;
   display: flex;
@@ -64,6 +61,7 @@ body {
 span {
   color: var(--gray);
 }
+
 span {
   font-weight: 300;
 }
@@ -71,6 +69,7 @@ span {
 .movie-content .details {
   margin-top: 1.5rem;
 }
+
 .details p {
   margin-top: 0.75rem;
 }
@@ -88,6 +87,7 @@ h2 {
   font-weight: 500;
   font-size: 2.15rem;
 }
+
 .movie-desc-2 p {
   margin-top: 2rem;
   color: var(--gray);
@@ -100,7 +100,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 @media (width < 640px) {
@@ -109,9 +109,11 @@ h2 {
     justify-content: center;
     align-items: center;
   }
+
   .movie-description .movie-content {
     margin-top: 3rem;
   }
+
   .movie-content h1 {
     font-size: 1.6rem;
   }
@@ -119,6 +121,7 @@ h2 {
   .movie-type p {
     font-size: 0.75rem;
   }
+
   .movie-type .line {
     height: 15px;
   }
@@ -126,6 +129,7 @@ h2 {
   .details {
     margin-top: 2rem;
   }
+
   .details p {
     font-size: 0.85rem;
     margin-top: 1rem;
@@ -135,12 +139,10 @@ h2 {
     font-size: 1.5rem;
   }
 
-  .movie-desc-2 {
-    margin-top: 70%;
-  }
   .movie-desc-2 h2 {
     font-size: 1.4rem;
   }
+
   .movie-desc-2 p {
     font-size: 0.8rem;
   }
