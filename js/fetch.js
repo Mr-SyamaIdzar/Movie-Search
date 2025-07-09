@@ -37,11 +37,11 @@ async function fetchMovies(keyword) {
 
 // Fungsi untuk membuat dan menyisipkan card
 function buatCard(detail, container) {
+  const poster =
+    detail.Poster !== "N/A" ? detail.Poster : "assets/placeholder.jpg";
   const cardHTML = `
     <div class="card">
-      <img class="image" src="${
-        detail.Poster !== "N/A" ? detail.Poster : "placeholder.jpg"
-      }" alt="${detail.Title}" />
+      <img class="image" src="${poster}" alt="${detail.Title}" />
       <div class="content">
         <h2>${detail.Title}</h2>
         <h3>${detail.Year}</h3>
@@ -54,9 +54,7 @@ function buatCard(detail, container) {
           </span>
         </div>
         <div class="buttons">
-          <a href="detail.html?id=${
-            detail.imdbID
-          }" class="primary-btn">Detail</a>
+          <a href="detail.html?id=${detail.imdbID}" class="primary-btn">Detail</a>
         </div>
       </div>
     </div>
@@ -159,7 +157,8 @@ async function fetchMovieDetail(id) {
       `https://www.omdbapi.com/?apikey=${apiKey}&i=${id}&plot=full`
     );
     const data = response.data;
-    console.log(data);
+    const poster =
+      data.Poster !== "N/A" ? data.Poster : "assets/placeholder.jpg";
 
     // Ubah genre menjadi array agar bisa dipisah
     const genres = data.Genre.split(",").map((g) => g.trim());
@@ -168,7 +167,7 @@ async function fetchMovieDetail(id) {
       <div class="movie-container">
         <div class="movie-description">
           <div class="movie-image">
-            <img src="${data.Poster}" alt="${data.Title}" />
+            <img src="${poster}" alt="${data.Title}" />
           </div>
           <div class="movie-content">
             <div class="movie-trailer">
