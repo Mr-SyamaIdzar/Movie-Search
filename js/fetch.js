@@ -21,6 +21,7 @@ async function fetchMovies(keyword) {
           `https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`
         );
         const detail = detailRes.data;
+        console.log(detail);
 
         // Panggil fungsi pembuat card
         buatCard(detail, hasilContainer);

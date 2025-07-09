@@ -1,11 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search movie</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search movie</title>
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="css/searchBar.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+    <!-- CSS Internal -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #2a2f4a;
+      }
+    </style>
+    <!-- Icon -->
+    <script
+      src="https://kit.fontawesome.com/bb239bc160.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Search -->
+    <nav class="search-container">
+      <form action="" class="search-bar">
+        <input
+          type="text"
+          placeholder="Search movie tittle"
+          class="field-input"
+        />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+
+    <div class="detail-container">
+      <div class="movie-container">
+        <div class="movie-description">
+          <div class="movie-image">
+            <img
+              src="assets/DALL·E 2024-11-07 14.03.12 - A cozy indoor scene of a person working on a music player website on a computer. The room has a creative and organized vibe, with a desk, a few monito.webp"
+              alt="contoh"
+            />
+          </div>
+          <div class="movie-content">
+            <div class="movie-trailer">
+              <h1>Breaking Bad</h1>
+              <div class="movie-type">
+                <p>Crime</p>
+                <div class="line"></div>
+                <p>Drama</p>
+                <div class="line"></div>
+                <p>Thriller</p>
+              </div>
+            </div>
+            <div class="details">
+              <p class="rating">Rating: 9,5</p>
+              <p class="runtime">98 min</p>
+              <p class="rated">18+</p>
+              <p class="year">USA, 2008,2013</p>
+              <p>Director: <span class="director">Vince Gilligan</span></p>
+              <p>
+                Actors:
+                <span class="actors"
+                  >Bryan Cranston, Aaron Paul, Anna Gunn</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie-desc-2">
+        <h2>Description</h2>
+        <p>
+          Breaking Bad is an American crime drama television series created and
+          produced by Vince Gilligan. Set and filmed in Albuquerque, New Mexico,
+          the series follows Walter White(Bryan Cranston), an underpaid,
+          overqualified, and dispirited high-school chemistry teacher who is
+          struggling with a recent diagnosis of stage three lung cancer. White
+          turns to a life of crime and partners with a former student, Jesse
+          Pinkman(Aaron Paul), to produce and distribute methamphetamineto
+          secure his family's financial future before he dies, while navigating
+          the dangers of the criminal underworld. The show aired on AMC from
+          January 20, 2008, to September 29, 2013, consisting of five seasons
+          for a total of 62 episodes.
+        </p>
+        <div class="bb-img">
+          <img
+            src="assets/DALL·E 2024-11-07 14.03.12 - A cozy indoor scene of a person working on a music player website on a computer. The room has a creative and organized vibe, with a desk, a few monito.webp"
+            alt="contoh gambar"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,152 @@
+:root {
+  --pink: #de5d83;
+  --black: #101116;
+  --gray: #bebebe;
+  --light-gray: #d9d9d9;
+  --comment-box: #171b27;
+  --comment: #555d68;
+  --comment-date: #8a8a8a;
+  --warning: #e22c2c;
+  --yellow: #eee62f;
+}
+
+body {
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+
+.movie-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.movie-description {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15%;
+  margin: 0 5%;
+}
+.movie-description img {
+  width: 330px;
+  height: 455px;
+}
+.movie-description .movie-content {
+  height: 455px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.movie-content h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.movie-content p {
+  color: #d9d9d9;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.movie-content .movie-type {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.movie-type .line {
+  height: 25px;
+  width: 1px;
+  background-color: var(--gray);
+}
+
+.movie-type p,
+span {
+  color: var(--gray);
+}
+span {
+  font-weight: 300;
+}
+
+.movie-content .details {
+  margin-top: 1.5rem;
+}
+.details p {
+  margin-top: 0.75rem;
+}
+
+.movie-desc-2 {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 1rem 5%;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.15rem;
+}
+.movie-desc-2 p {
+  margin-top: 2rem;
+  color: var(--gray);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 25px;
+}
+
+.movie-desc-2 .bb-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+@media (width < 640px) {
+  .movie-description {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-description .movie-content {
+    margin-top: 3rem;
+  }
+  .movie-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .movie-type p {
+    font-size: 0.75rem;
+  }
+  .movie-type .line {
+    height: 15px;
+  }
+
+  .details {
+    margin-top: 2rem;
+  }
+  .details p {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .save i {
+    font-size: 1.5rem;
+  }
+
+  .movie-desc-2 {
+    margin-top: 70%;
+  }
+  .movie-desc-2 h2 {
+    font-size: 1.4rem;
+  }
+  .movie-desc-2 p {
+    font-size: 0.8rem;
+  }
+
+  .bb-img img {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
