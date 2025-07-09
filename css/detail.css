@@ -44,20 +44,20 @@ body {
   font-size: 1.1rem;
 }
 
-.movie-content .movie-type {
+.movie-content .movie-genre {
   margin-top: 1.4rem;
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
 }
 
-.movie-type .line {
+.movie-genre .line {
   height: 25px;
   width: 1px;
   background-color: var(--gray);
 }
 
-.movie-type p,
+.movie-genre p,
 span {
   color: var(--gray);
 }
@@ -96,13 +96,6 @@ h2 {
   line-height: 25px;
 }
 
-.movie-desc-2 .bb-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
 @media (width < 640px) {
   .movie-description {
     flex-direction: column;
@@ -118,11 +111,11 @@ h2 {
     font-size: 1.6rem;
   }
 
-  .movie-type p {
+  .movie-genre p {
     font-size: 0.75rem;
   }
 
-  .movie-type .line {
+  .movie-genre .line {
     height: 15px;
   }
 
@@ -135,20 +128,11 @@ h2 {
     margin-top: 1rem;
   }
 
-  .save i {
-    font-size: 1.5rem;
-  }
-
   .movie-desc-2 h2 {
     font-size: 1.4rem;
   }
 
   .movie-desc-2 p {
     font-size: 0.8rem;
-  }
-
-  .bb-img img {
-    width: 75%;
-    margin: 0 auto;
   }
 }

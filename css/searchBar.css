@@ -7,7 +7,7 @@ nav {
   align-items: center;
 }
 
-.search-bar {
+.search-form {
   width: 100%;
   max-width: 700px;
   max-height: 50px;
@@ -19,7 +19,7 @@ nav {
   backdrop-filter: blur(4px) saturate(100%);
 }
 
-.search-bar input {
+.search-form input {
   background: transparent;
   flex: 1;
   border: 0;
@@ -33,11 +33,11 @@ nav {
   color: #dcd9f0;
 }
 
-.search-bar button i {
+.search-form button i {
   width: 25px;
 }
 
-.search-bar button {
+.search-form button {
   border: 0;
   border-radius: 50%;
   width: 40px;
